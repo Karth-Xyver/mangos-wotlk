@@ -2554,7 +2554,7 @@ void Player::RegenerateHealth(uint32 diff)
     }
 
     // always regeneration bonus (including combat)
-    addvalue += GetTotalAuraModifier(SPELL_AURA_MOD_HEALTH_REGEN_IN_COMBAT);
+    addvalue += GetTotalAuraModifier(SPELL_AURA_MOD_HEALTH_REGEN_IN_COMBAT) / 5.0f;
 
     if (addvalue < 0)
         addvalue = 0;
